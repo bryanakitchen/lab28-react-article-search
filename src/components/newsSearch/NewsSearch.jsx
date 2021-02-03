@@ -17,7 +17,6 @@ export default class NewsSearch extends Component {
         <>
           <div>
             <input type="text" value={article} onChange={this.handleChange} />
-            <p>You searched for: {article}</p>
           </div>
           <Search />
           <ArticleList />
