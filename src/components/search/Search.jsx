@@ -1,9 +1,15 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-export default function Search() {
-  return (
-    <div>
-        Hello from the Search component.
-    </div>
-  );
-}
+const Search = ({ searchText, onChange }) => (
+  <div>
+    <input type="text" value={searchText} onChange={onChange} />
+  </div>
+);
+
+Search.prototypes = {
+  searchText: PropTypes.string.isRequired,
+  onChange: PropTypes.func.isRequired
+};
+
+export default Search;

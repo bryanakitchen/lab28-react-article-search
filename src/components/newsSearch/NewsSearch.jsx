@@ -15,10 +15,7 @@ export default class NewsSearch extends Component {
       const { article } = this.state;
       return (
         <>
-          <div>
-            <input type="text" value={article} onChange={this.handleChange} />
-          </div>
-          <Search />
+          <Search searchText={article} onChange={this.handleChange} />
           <ArticleList />
         </>
       );
