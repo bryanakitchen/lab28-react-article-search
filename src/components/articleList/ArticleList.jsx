@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 const ArticleList = ({ articles }) => {
   const articleList = articles.map(article => (
     <li key={article.url}>
-      <Article articles={articles} />
+      <Article {...articles} />
     </li>
   ));
 
