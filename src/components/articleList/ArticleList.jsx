@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 const ArticleList = ({ articles }) => {
   const articleList = articles.map(article => (
     <li key={article.url}>
-      <Article {...articles} />
+      <Article {...article} />
     </li>
   ));
 
@@ -16,7 +16,7 @@ const ArticleList = ({ articles }) => {
   );
 };
 
-ArticleList.prototypes = {
+ArticleList.propTypes = {
   articles: PropTypes.array.isRequired
 };
   

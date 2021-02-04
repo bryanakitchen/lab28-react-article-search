@@ -7,7 +7,7 @@ const Search = ({ searchText, onChange }) => (
   </div>
 );
 
-Search.prototypes = {
+Search.propTypes = {
   searchText: PropTypes.string.isRequired,
   onChange: PropTypes.func.isRequired
 };
