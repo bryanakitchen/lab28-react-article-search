@@ -7,15 +7,15 @@ describe('NewsSearch component', () => {
   it('renders NewsSearch', () => {
     render(<NewsSearch />);
 
-    const searchInput = screen.getByLabelText('Search Box');
+    const searchInput = screen.getByPlaceholderText('Search here...');
     fireEvent.change(searchInput, {
       target: {
-        value: 'tesla'
+        value: 'dogs'
       }
     });
 
     return waitFor(() => {
-      expect(searchInput).toHaveValue('tesla');
+      expect(screen.getByTestId('articles')).not.toBeEmptyDOMElement();
     });
   });
 });
