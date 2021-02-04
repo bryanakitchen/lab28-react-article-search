@@ -4,26 +4,33 @@ import Search from '../search/Search';
 
 export default class NewsSearch extends Component {
     state = {
-      article: ''
+      searchText: '',
+      articles: [],
+      loading: false
     }
 
     componentDidMount() {
+      this.setState({ loading: true });
       // eslint-disable-next-line max-len
       fetch(`https://newsapi.org/v2/everything?q=tesla&apiKey=${process.env.API_KEY}`)
-      .then(res => res.json())
-      .then(console.log)
+        .then(res => res.json())
+        .then(json => json.articles)
+        // .then(articles => this.setState({ articles }))
+        .then(console.log);
+
+      this.setState({ loading: false });
     }
 
     handleChange = ({ target }) => {
-      this.setState({ article: target.value });
+      this.setState({ searchText: target.value });
     }
   
     render() {
-      const { article } = this.state;
+      const { searchText } = this.state;
       return (
         <>
-          <Search searchText={article} onChange={this.handleChange} />
-          <ArticleList />
+          <Search searchText={searchText} onChange={this.handleChange} />
+          <ArticleList articles={articles} />
         </>
       );
     }

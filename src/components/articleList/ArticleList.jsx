@@ -1,13 +1,23 @@
 import React from 'react';
 import Article from '../article/Article';
+import PropTypes from 'prop-types';
 
-export default function ArticleList() {
+const ArticleList = ({ articles }) => {
+  const articleList = articles.map(article => (
+    <li key={article.url}>
+      <Article articles={articles} />
+    </li>
+  ));
+
   return (
-    <>
-      <div>
-          Hello from the ArticleList component.
-      </div>
-      <Article />
-    </> 
+    <ul>
+      {articleList}
+    </ul>
   );
-}
+};
+
+ArticleList.prototypes = {
+  articles: PropTypes.array.isRequired
+};
+  
+export default ArticleList;
