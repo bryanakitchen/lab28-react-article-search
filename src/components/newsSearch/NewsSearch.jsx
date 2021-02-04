@@ -19,19 +19,23 @@ export default class NewsSearch extends Component {
     }
 
     handleChange = ({ target }) => {
-      searchArticle(target.value)
+      target.value.trim() && searchArticle(target.value)
         .then(articles => this.setState({ articles }));
 
       this.setState({ searchText: target.value });
     }
   
     render() {
-      const { searchText, articles } = this.state;
+      const { searchText, articles, loading } = this.state;
 
       return (
         <>
           <Search searchText={searchText} onChange={this.handleChange} />
-          <ArticleList articles={articles} />
+          {
+            !loading 
+              ? <ArticleList articles={articles} /> 
+              : <h3>Loading...</h3>
+          }
         </>
       );
     }
