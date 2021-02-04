@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 const Search = ({ searchText, onChange }) => (
   <div>
-    <input type="text" value={searchText} onChange={onChange} />
+    <input placeholder="Search here..." type="text" value={searchText} onChange={onChange} />
   </div>
 );
 

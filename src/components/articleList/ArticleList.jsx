@@ -10,14 +10,18 @@ const ArticleList = ({ articles }) => {
   ));
 
   return (
-    <ul>
+    <ul data-testid="articles">
       {articleList}
     </ul>
   );
 };
 
 ArticleList.propTypes = {
-  articles: PropTypes.array.isRequired
+  articles: PropTypes.arrayOf(PropTypes.shape({
+    title: PropTypes.string.isRequired,
+    author: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+  })).isRequired
 };
   
 export default ArticleList;

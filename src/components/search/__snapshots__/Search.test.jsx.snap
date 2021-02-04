@@ -4,6 +4,7 @@ exports[`Search component renders Search 1`] = `
 <DocumentFragment>
   <div>
     <input
+      placeholder="Search here..."
       type="text"
       value="tesla"
     />

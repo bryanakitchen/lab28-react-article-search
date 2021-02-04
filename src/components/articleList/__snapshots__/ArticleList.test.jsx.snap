@@ -2,6 +2,8 @@
 
 exports[`ArticleList component renders ArticleList 1`] = `
 <DocumentFragment>
-  <ul />
+  <ul
+    data-testid="articles"
+  />
 </DocumentFragment>
 `;
