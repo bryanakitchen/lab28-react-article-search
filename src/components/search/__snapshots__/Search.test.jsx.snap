@@ -3,7 +3,13 @@
 exports[`Search component renders Search 1`] = `
 <DocumentFragment>
   <div>
+    <label
+      for="textInput"
+    >
+      Search Box
+    </label>
     <input
+      id="textInput"
       type="text"
       value="tesla"
     />
