@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Article component renders Article 1`] = `
+<DocumentFragment>
+  <h2>
+    Happy Trees
+  </h2>
+  <h3>
+    Bob Ross
+  </h3>
+  <p>
+    this article talks about drawing happy trees
+  </p>
+</DocumentFragment>
+`;
