@@ -4,6 +4,29 @@ exports[`ArticleList component renders ArticleList 1`] = `
 <DocumentFragment>
   <ul
     data-testid="articles"
-  />
+  >
+    <li>
+      <h2>
+        Happy Trees
+      </h2>
+      <h3>
+        Bob Ross
+      </h3>
+      <p>
+        this article talks about drawing happy trees
+      </p>
+    </li>
+    <li>
+      <h2>
+        Happy Trees 2
+      </h2>
+      <h3>
+        Bob Ross
+      </h3>
+      <p>
+        this article talks about drawing more happy trees
+      </p>
+    </li>
+  </ul>
 </DocumentFragment>
 `;
